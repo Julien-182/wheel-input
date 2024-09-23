@@ -2,6 +2,8 @@
 
 Web component acting as a dropdown witha wheel design inspired by the Apple iOS wheel input.
 
+[Link to demo](https://codepen.io/julien-ducrot/pen/JjgjpPG)
+
 ## Install
 
 Import the Javascript module in your web page.
