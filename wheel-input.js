@@ -5,8 +5,10 @@ export class WheelInput extends HTMLElement {
     css = `
         .wrapper {
             position: relative;
+            display: grid;
             width: fit-content;
-
+            grid-template-columns: auto 1fr;
+            padding-inline: .2em;
             --line-height: 1.2em;
         }
 
@@ -31,24 +33,23 @@ export class WheelInput extends HTMLElement {
 
 
         .intersection {
-            position: absolute;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            align-self: center;
-            top: 50%;
-            left: 0;
-            padding-left: 100%;
-            height: var(--line-height);
-            /* border: 1px dashed red; */
-            background: #aaa5;
-            border-radius: .2em;
-            transform: translateY(-50%);
+            padding: .2em .4em;
             pointer-events: none;
+            align-self: center;
+        }
+            
+        .intersection::before {
+            content: '';
+            width: 100%;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            background: #aaa5;
+            height: var(--line-height);
         }
 
         .intersection label {
-            margin-left: 1ch;
+            line-height: var(--line-height);
         }
 
         .wheel span {
